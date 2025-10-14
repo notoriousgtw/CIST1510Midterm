@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Navbar</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./home.html">
+                    <img src="./logo.svg" alt="plane_and_simple_logo">
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <img src="./hamburger.svg" alt="hamburger_menu">
+            </div>
+            <div class="nav-menu hide">
+                <a href="./home.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Service</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <!-- <div class="home_bg_img"> -->
+            <picture>
+                <source media="(orientation: portrait)" srcset="./norway_portrait.jpg">
+                <img src="./norway.jpg" alt="norway_picture" style="width: 100%; height: auto;">
+            </picture>
+        <!-- </div> -->
+        <div class="home_content">
+            <h1>Everyone wants to travel, but nobody wants the hassel.</h1>
+            <h2 style="padding-top: 1rem;">If you want to:</h2>
+            <ul class="home_list">
+                <li>Have new worldy experiences</li>
+                <li>Get out of your culinary comfort zone</li>
+                <li>Learn about other cultures and peoples</li>
+            </ul>
+            <h2 style="padding-top: 1rem;">But you:</h2>
+            <ul class="home_list">
+                <li>Don't have a passport</li>
+                <li>Aren't sure what is out there</li>
+                <li>Don't know ehere to begin planning your adventure</li>
+            </ul>
+            <h1>Then that's where we com in! We will take the tedium out of your itenrary and make your getaway dreams a reality, Plane and Simple!</h1>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

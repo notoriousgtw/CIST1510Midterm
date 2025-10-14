@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+}
+
+body {
+    font-family: sans-serif;
+    background: radial-gradient(circle, rgba(240, 135, 135, 1) 0%, rgba(255, 199, 167, 1) 33%, rgba(254, 226, 173, 1) 67%, rgba(248, 250, 180, 1) 100%);
+    background-size: cover;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 199, 167, 1);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* navbar styling */
+.navbar {
+    display: flex;
+    height: 20rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-bottom: 1rem solid rgba(240, 135, 135, 1);
+    background: url(https://cdn.wallpapersafari.com/26/14/PLhdqA.jpg);
+    background-position-y: bottom;
+}
+
+/* logo style  */
+.logo img {
+    width: 16rem;
+    height: 16rem;
+    margin-left: 5rem;
+    margin-right: 3rem;
+}
+
+.hamburger-menu {
+    padding-right: 1.5rem;
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+/* .hamburger-menu .line {
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: black;
+    cursor: pointer;
+} */
+
+.nav-menu {
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color: rgb(254, 226, 173);
+    font-weight: 600;
+
+}
+
+.nav-menu a {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover {
+    background-color: rgb(248, 250, 180);
+}
+
+.hide {
+    display: none;
+}
+
+/* for Desktop view  */
+@media screen and (min-width:930px) {
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .nav-menu a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .nav-menu a:hover {
+        background-color: rgb(248, 250, 180);
+        border-radius: 5px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    display: flexbox;
+    justify-content: center;
+    padding: 3rem;
+    z-index: 2;
+}
+
+.home_bg_img img {
+    /* position: absolute; */
+    /* width: 100%; */
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(norway.jpg); */
+    /* background-size: cover; */
+}
+
+.home_content {
+    position: absolute;
+    left: 6rem;
+    bottom: 6rem;
+    width: calc(100% - 12rem);
+    max-height: calc(100% - 12rem);
+    /* max-width: calc(3840px- 12rem); */
+    /* translate: -3rem -3rem; */
+    background-color: rgba(163, 198, 209, 0.95);
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem;
+    z-index: 1;
+}
+
+.home_content h1 {
+    text-decoration: none;
+    color: rgba(240, 135, 135, 1);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.home_content h2 {
+    text-decoration: none;
+    color: rgba(255, 199, 167, 1);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.home_list {
+    text-decoration: none;
+    color: rgba(255, 199, 167, 1);
+    list-style-position: inside;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.home_list li {
+    text-decoration: none;
+    color: rgba(255, 199, 167, 1);
+    font-size: 3rem;
+    font-weight: bold;
+}
