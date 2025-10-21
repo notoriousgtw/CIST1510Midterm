@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Plane & Simple</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav wrap">
+      <a class="brand" href="home.html">
+        <img class="logo" src="images/logo.svg" alt="Plane & Simple logo">
+      </a>
+      <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <span class="tag">Say Hello</span>
+        <h1 id="title">Let’s plan your next trip.</h1>
+        <p>We usually reply within one business day. For urgent travel help, call or text us anytime.</p>
+      </div>
+
+      <div class="hero-media">
+        <img src="images/letsplanit.jpg" alt="Travelers planning their next adventure together">
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section aria-labelledby="formTitle">
+      <h2 id="formTitle" style="font-family:'Playfair Display',serif;margin-top:0">Get in Touch</h2>
+      <form id="contact-form" autocomplete="on" novalidate>
+        <div>
+          <label for="name">Full name *</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div>
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567">
+        </div>
+        <div>
+          <label for="tripType">Trip type</label>
+          <select id="tripType" name="tripType">
+            <option value="weekend">Weekend escape</option>
+            <option value="honeymoon">Honeymoon</option>
+            <option value="friends">Friends’ trip</option>
+            <option value="family">Family vacation</option>
+            <option value="solo">Solo</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="start">Start date</label>
+          <input id="start" name="start" type="date">
+        </div>
+        <div>
+          <label for="end">End date</label>
+          <input id="end" name="end" type="date">
+        </div>
+        <div class="full">
+          <label for="message">Tell us your dream trip *</label>
+          <textarea id="message" name="message" required placeholder="Describe your ideal trip…"></textarea>
+        </div>
+        <div class="full" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button class="btn primary" type="submit">Send Request</button>
+          <span class="hint">Or email us directly at <a
+              href="mailto:hello@planeandsimple.travel"><strong>hello@planeandsimple.travel</strong></a></span>
+        </div>
+        <p id="form-status" class="full hint" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-labelledby="faq">
+      <h2 id="faq" style="font-family:'Playfair Display',serif;margin-top:0">Quick Answers</h2>
+      <div class="faq">
+        <details>
+          <summary>How fast do you reply?</summary>
+          <p>We respond within 24 hours on business days — faster if you text us for urgent needs.</p>
+        </details>
+        <details>
+          <summary>Do you charge planning fees?</summary>
+          <p>Basic consults are free. Custom itineraries have a simple, transparent flat fee that’s applied to your trip
+            if you book.</p>
+        </details>
+        <details>
+          <summary>Can you plan group trips?</summary>
+          <p>Absolutely. We organize friend getaways, family trips, and retreats with personalized support.</p>
+        </details>
+        <details>
+          <summary>Can you work with any budget?</summary>
+          <p>Yes — we love helping travelers experience luxury without breaking the bank.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Plane &amp; Simple — Travel made simple, not basic.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if (!name || !email || !msg) {
+        status.textContent = "Please fill in all required fields.";
+        status.style.color = "#b00020";
+        return;
+      }
+      status.textContent = "Thanks! Your message has been sent (demo).";
+      status.style.color = "#2e7d32";
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>
